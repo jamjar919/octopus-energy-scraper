@@ -34,6 +34,7 @@ const formatTariffData = (tariff, tariffData) => tariffData.map(tariffEntry => {
         from: from.slice(11, 19),
         to: to.slice(11, 19),
         code: tariff.code,
+        gsp: tariff.gsp,
         region_name: tariff.name,
         unit_rate_excl_vat: tariffEntry.value_exc_vat,
         unit_rate_incl_vat: tariffEntry.value_inc_vat
@@ -52,6 +53,7 @@ const saveToCsv = (filename, formattedTariffData) => {
             {id: 'from', title: 'from'},
             {id: 'to', title: 'to'},
             {id: 'code', title: 'code'},
+            {id: 'gsp', title: 'gsp'},
             {id: 'region_name', title: 'region_name'},
             {id: 'unit_rate_excl_vat', title: 'unit_rate_excl_vat'},
             {id: 'unit_rate_incl_vat', title: 'unit_rate_incl_vat'},
